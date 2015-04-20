@@ -12,39 +12,33 @@
 				  var getData = function () {
 				    Tabletop.init({ 
 				    	"key": public_spreadsheet_url,
-				        "callback": processData,
+				        "callback": showInfo,
 				        "simpleSheet": true
 				    });
 				  }
 
-				  var processData = function(data){
-			        	console.log(data);
-			        	for(var i=0; i<data.length; i++) {
+				  // var processData = function(data){
+			   //      	console.log(data);
+			   //      	for(var i=0; i<data.length; i++) {
 
-			        		$("body").css("backgroundColor", data[i].color);
+			   //      		$("body").css("backgroundColor", data[i].color);
 
-			        		$("body").append(data[i].color + " ");
+			   //      		$("body").append(data[i].color + " ");
 
-			        	}
-			        };
+			   //      	}
+			   //      };
 
 
-				  getData();
+				  // getData();
+				  function showInfo(data, tabletop) {
+				  	alert("done")
+				  	console.log(data);
+				  }
 
 
 				
 			});
 		</script>
-		<style>
-		.dogs {
-			background-color:green;
-		}
-
-		.cats {
-			background-color:orange;
-		}
-
-		</style>
 
 	</head>
 	<body>
