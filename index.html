@@ -12,30 +12,26 @@
 				  var getData = function () {
 				    Tabletop.init({ 
 				    	"key": public_spreadsheet_url,
-				        "callback": showInfo,
+				        "callback": processData,
 				        "simpleSheet": true
 				    });
 				  }
 
-				  // var processData = function(data){
-			   //      	console.log(data);
-			   //      	for(var i=0; i<data.length; i++) {
+				  var processData = function(data){
+			        	console.log(data);
+			        	for(var i=0; i<data.length; i++) {
 
-			   //      		$("body").css("backgroundColor", data[i].color);
+			        		$("body").css("backgroundColor", data[i].color);
 
-			   //      		$("body").append(data[i].color + " ");
+			        		$("body").append(data[i].color + " ");
 
-			   //      	}
-			   //      };
-
-
-				  // getData();
-				  function showInfo(data, tabletop) {
-				  	alert("done")
-				  	console.log(data);
-				  }
+			        	}
+			        };
 
 
+			
+
+  				getData();
 				
 			});
 		</script>
