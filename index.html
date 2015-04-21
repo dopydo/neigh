@@ -12,19 +12,17 @@
 				  var getData = function () {
 				    Tabletop.init({ 
 				    	"key": public_spreadsheet_url,
-				        "callback": borough,
+				        "callback": processData,
 				        "simpleSheet": true
 				    });
 				  }
 
-				  var borough = function(data){
+				  var processData = function(data){
 			        	console.log(data);
 			        	for(var i=0; i<data.length; i++) {
 
-			       
-			        		if(borough == "Brooklyn") {
-				console.log("Person in Brooklyn");
-			}
+			      $("body").append(data[i]);
+				}
 			 
 
 			        	}
