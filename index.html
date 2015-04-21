@@ -15,17 +15,22 @@
 				        "callback": processData,
 				        "simpleSheet": true
 				    });
-				  }
+				}
 
 				  var processData = function(data){
-			        	console.log(data);
+			        	console.log(data.toLowerCase());
+			        	var brooklyncount = 0;
 			        	for(var i=0; i<data.length; i++) {
+			        		if(data[i].borough =="brooklyn") {
+			        			brooklyn++;
+			        		}
+					      
+			        	}
 
-			      $("body").append(data[i]);
+			      $("body").append(data[i].borough);
 				}
 			 
-
-			        	}
+			 
 			       
 
 
