@@ -18,9 +18,13 @@
 				}
 
 				  var processData = function(data){
-			        	console.log(data.toLowerCase());
+			        	console.log(data);
+
 			        	var brooklyncount = 0;
+
 			        	for(var i=0; i<data.length; i++) {
+			        		var bor = data[i].borough;
+			        		var low = bor.toLowerCase();
 			        		if(data[i].borough =="brooklyn") {
 			        			brooklyn++;
 			        		}
